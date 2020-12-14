@@ -27,7 +27,7 @@ $ docker run -d --name some-kafka-zookeeper -p 9092:9092 -v config:/kafka/config
 Run the command below from the root directory of project.
 
 ```
-$ docker build . -t {your_image_name}[:{version}]
+$ docker build -t {your_image_name}[:{version}] .
 ```
 
 #### Kafka
@@ -35,7 +35,7 @@ $ docker build . -t {your_image_name}[:{version}]
 Run the command below from {project_root}/kafka
 
 ```
-$ docker build -f kafka.Dockerfile -t {your_image_name}[:{version}]
+$ docker build -t {your_image_name}[:{version}] -f kafka.Dockerfile .
 ```
 
 #### Zookeeper
@@ -43,5 +43,5 @@ $ docker build -f kafka.Dockerfile -t {your_image_name}[:{version}]
 Run the command below from {project_root}/kafka
 
 ```
-$ docker build -f zookeeper.Dockerfile -t {your_image_name}[:{version}]
+$ docker build -t {your_image_name}[:{version}] -f zookeeper.Dockerfile .
 ```
