@@ -16,6 +16,6 @@ WORKDIR /kafka
 EXPOSE 2181
 VOLUME ["/tmp/zookeeper"]
 
-ADD config/* /kafka/config
+ADD config/* /kafka/config/
 
 CMD ["/bin/bash", "-c", "bin/zookeeper-server-start.sh config/zookeeper.properties"]
