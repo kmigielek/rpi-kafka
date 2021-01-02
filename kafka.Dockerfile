@@ -1,5 +1,5 @@
 FROM arm64v8/alpine:3.12.2
-MAINTAINER Fine <dlgmltjr0925@gmail.com>
+MAINTAINER fine <dlgmltjr0925@gmail.com>
 
 #Install Java SDK
 RUN apk update \
@@ -17,3 +17,4 @@ EXPOSE 9092
 ADD config/* /kafka/config/
 
 CMD ["/bin/bash", "-c", "bin/kafka-server-start.sh config/server.properties"]
+
