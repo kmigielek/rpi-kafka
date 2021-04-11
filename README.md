@@ -1,6 +1,6 @@
 # rpi-kafka docker
 
-Kafka image available on Raspberry Pi with arm64v8 ubuntu installed.
+Kafka image available on Raspberry Pi with arm64v8 alpine installed.
 
 ## How to run
 
