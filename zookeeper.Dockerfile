@@ -12,6 +12,7 @@ RUN wget https://apachemirror.sg.wuchna.com/kafka/2.8.0/kafka_2.13-2.8.0.tgz \
  && mv kafka_2.13-2.8.0 kafka
 
 WORKDIR /kafka
+ADD ./config/* ./config/
 
 EXPOSE 2181
 VOLUME ["/tmp/zookeeper", "/kafka/config"]
