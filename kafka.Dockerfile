@@ -14,9 +14,8 @@ RUN wget https://apachemirror.sg.wuchna.com/kafka/2.8.0/kafka_2.13-2.8.0.tgz \
 WORKDIR /kafka
 
 EXPOSE 9092
-ADD config/* /kafka/config/
+VOLUME ["/kafka/config"]
 
 ENTRYPOINT ["/bin/sh", "-c", "entrypoint.sh"]
 
 CMD ["/bin/bash", "-c", "bin/kafka-server-start.sh config/server.properties"]
-

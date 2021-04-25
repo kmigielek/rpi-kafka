@@ -14,8 +14,6 @@ RUN wget https://apachemirror.sg.wuchna.com/kafka/2.6.0/kafka_2.12-2.6.0.tgz \
 WORKDIR /kafka
 
 EXPOSE 2181
-VOLUME ["/tmp/zookeeper"]
-
-ADD config/* /kafka/config/
+VOLUME ["/tmp/zookeeper", "/kafka/config"]
 
 CMD ["/bin/bash", "-c", "bin/zookeeper-server-start.sh config/zookeeper.properties"]
