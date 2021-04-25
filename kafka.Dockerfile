@@ -16,5 +16,7 @@ WORKDIR /kafka
 EXPOSE 9092
 ADD config/* /kafka/config/
 
+ENTRYPOINT ["/bin/sh", "-c", "entrypoint.sh"]
+
 CMD ["/bin/bash", "-c", "bin/kafka-server-start.sh config/server.properties"]
 
