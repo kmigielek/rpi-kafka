@@ -6,7 +6,7 @@ RUN apk update \
  && apk add openjdk11 bash
 
 #Install Kafka
-RUN wget https://apachemirror.sg.wuchna.com/kafka/2.6.0/kafka_2.12-2.6.0.tgz \
+RUN wget https://archive.apache.org/dist/kafka/2.6.0/kafka_2.12-2.6.0.tgz \
  && tar -xzf kafka_2.12-2.6.0.tgz \
  && rm kafka_2.12-2.6.0.tgz \
  && mv kafka_2.12-2.6.0 kafka
